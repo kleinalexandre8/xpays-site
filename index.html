@@ -1,39 +1,206 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <title>XPay</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPay — Crypto payment infrastructure for modern merchants</title>
+  <meta name="description" content="XPay provides crypto payment infrastructure for merchants, platforms, and marketplaces.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <strong>XPay</strong>
+        <span>Crypto payment infrastructure for modern merchants</span>
+      </div>
+      <nav class="nav">
+        <a href="#product">Product</a>
+        <a href="#infrastructure">Infrastructure</a>
+        <a href="#compliance">Compliance</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="checkout.html">Checkout</a>
+        <a class="cta-link" href="#contact">Contact</a>
+      </nav>
+    </header>
 
-<div class="container">
+    <section class="hero">
+      <div class="panel">
+        <div class="badge">B2B software platform • Non-custodial orchestration layer</div>
+        <h1>Accept crypto payments with a cleaner merchant checkout and a compliant partner stack.</h1>
+        <p>
+          XPay provides checkout infrastructure, merchant APIs, transaction status orchestration,
+          and signed webhook delivery for businesses that want to add crypto payment capabilities
+          without rebuilding the full payment layer in-house.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="checkout.html">Request access</a>
+          <a class="btn btn-secondary" href="#product">Explore the product</a>
+        </div>
 
-<header>
-  <h2>XPay</h2>
-  <nav>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="checkout.html">Checkout</a>
-  </nav>
-</header>
+        <div class="mini-stats">
+          <div>
+            <strong>API-first</strong>
+            <p>Merchant integration designed for platforms, marketplaces, and modern commerce stacks.</p>
+          </div>
+          <div>
+            <strong>Partner-led</strong>
+            <p>Regulated services are performed by licensed providers integrated into the XPay flow.</p>
+          </div>
+          <div>
+            <strong>Operational</strong>
+            <p>Status tracking, webhook delivery, and merchant-side workflow visibility.</p>
+          </div>
+        </div>
+      </div>
 
-<div class="hero">
-  <h1>Crypto payments for modern businesses</h1>
-  <p>XPay provides infrastructure for merchants to accept crypto payments securely and efficiently.</p>
-  <a class="button" href="checkout.html">Start Payment</a>
-</div>
+      <div class="side-col">
+        <div class="card">
+          <span class="kicker">Merchant flow</span>
 
-<div class="card">
-  <h3>How it works</h3>
-  <p>We connect merchants with licensed providers to handle crypto transactions, compliance, and processing.</p>
-</div>
+          <div class="flow-item">
+            <div class="num">1</div>
+            <div>
+              <h3>Merchant creates a payment</h3>
+              <p>XPay generates a hosted payment session and returns a checkout flow ready to use.</p>
+            </div>
+          </div>
 
-<div class="card">
-  <h3>Infrastructure</h3>
-  <p>XPay acts as a software layer and does not hold funds or operate as a financial institution.</p>
-</div>
+          <div class="flow-item">
+            <div class="num">2</div>
+            <div>
+              <h3>Customer chooses crypto</h3>
+              <p>The checkout routes the buyer into the integrated partner flow for payment execution.</p>
+            </div>
+          </div>
 
-</div>
+          <div class="flow-item">
+            <div class="num">3</div>
+            <div>
+              <h3>Licensed partners process the transaction</h3>
+              <p>Verification, payment processing, conversion, and settlement are handled externally by licensed providers.</p>
+            </div>
+          </div>
 
+          <div class="flow-item">
+            <div class="num">4</div>
+            <div>
+              <h3>XPay reports status back</h3>
+              <p>Merchants receive updates through the dashboard and signed webhook notifications.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="kicker">Positioning</span>
+          <p>
+            XPay operates as a software infrastructure provider for businesses. XPay does not hold customer funds,
+            does not operate a consumer exchange, and does not perform regulated services directly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="product">
+      <div class="section-head">
+        <span class="kicker">Product</span>
+        <h2>Built for merchant operations, not just payment buttons.</h2>
+        <p>
+          XPay is designed for businesses that need a more controlled merchant payment layer:
+          checkout creation, payment state management, partner routing, webhook delivery,
+          and operational reporting.
+        </p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Hosted Checkout</h3>
+          <p style="margin-top:10px">A clean merchant-facing checkout experience designed to guide users into partner-managed payment and conversion flows.</p>
+        </div>
+        <div class="card">
+          <h3>Merchant API</h3>
+          <p style="margin-top:10px">Payment creation, transaction lookup, status monitoring, and operational events through a simple integration surface.</p>
+        </div>
+        <div class="card">
+          <h3>Webhooks & Reporting</h3>
+          <p style="margin-top:10px">Signed notifications and transaction state visibility for internal operations teams and merchant back offices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="infrastructure">
+      <div class="grid-2">
+        <div class="card">
+          <span class="kicker">Infrastructure</span>
+          <h2>Software-first architecture</h2>
+          <p>
+            XPay acts as an orchestration layer between merchants and integrated partners.
+            The platform focuses on software capabilities: APIs, checkout coordination,
+            payment tracking, and merchant operations support.
+          </p>
+        </div>
+        <div class="card">
+          <span class="kicker">Operations</span>
+          <h2>Built for reliability</h2>
+          <p>
+            Merchant teams need more than a button. XPay is structured around payment session handling,
+            state tracking, partner connectivity, and signed event delivery to downstream systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="compliance">
+      <div class="grid-2">
+        <div class="card">
+          <span class="kicker">Compliance</span>
+          <h2>Clear separation of roles</h2>
+          <p>
+            XPay is a business software provider. The platform is designed as a non-custodial orchestration layer and does not hold customer funds or customer crypto-assets.
+          </p>
+          <p style="margin-top:14px">
+            Identity verification, KYC/AML controls, payment processing, fiat-to-crypto conversion, and settlement are performed by licensed third-party providers integrated into the merchant flow.
+          </p>
+        </div>
+        <div class="card">
+          <span class="kicker">Use case clarity</span>
+          <h2>What XPay is — and what it is not</h2>
+          <ul class="list">
+            <li>XPay is built for merchants, platforms, and marketplaces.</li>
+            <li>XPay is not a retail exchange, broker, or custody wallet service.</li>
+            <li>XPay provides software infrastructure and merchant operational tooling.</li>
+            <li>Regulated services are delivered through licensed integration partners.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="grid-2">
+        <div class="card">
+          <span class="kicker">Contact</span>
+          <h2>Business contact</h2>
+          <p><strong>Business name:</strong> XPay</p>
+          <p><strong>Use case:</strong> Crypto payment infrastructure for merchants and marketplaces.</p>
+          <p><strong>General:</strong> contact@xpays.app</p>
+          <p><strong>Support:</strong> support@xpays.app</p>
+          <p><strong>Legal:</strong> legal@xpays.app</p>
+        </div>
+        <div class="card">
+          <span class="kicker">Reviewer note</span>
+          <h2>Website disclosure</h2>
+          <p>
+            This website is intended to clearly describe XPay’s role as a software-only provider.
+            The platform does not hold customer funds or provide regulated services directly.
+            Licensed third-party providers handle verification, payment processing, conversion, and settlement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © XPay — Crypto payment infrastructure for merchants
+    </div>
+  </div>
 </body>
 </html>
