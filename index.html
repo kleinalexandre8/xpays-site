@@ -1,10 +1,343 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <title>XPay</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPay — Crypto payment infrastructure for merchants</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e7e7e7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      position: sticky;
+      top: 16px;
+      backdrop-filter: blur(8px);
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    nav a:hover { color: var(--text); }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      margin-top: 28px;
+    }
+    .panel, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+    .panel { padding: 44px; }
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 18px;
+      background: #fafafa;
+    }
+    h1 {
+      font-size: 56px;
+      line-height: 1.05;
+      margin: 0 0 20px;
+      letter-spacing: -1.5px;
+    }
+    h2 {
+      font-size: 34px;
+      margin: 0 0 14px;
+      letter-spacing: -0.8px;
+    }
+    p {
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 0;
+    }
+    .cta {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid var(--line);
+    }
+    .btn.primary {
+      background: #111;
+      color: white;
+      border-color: #111;
+    }
+    .btn.secondary {
+      background: white;
+      color: #111;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+    .stat strong {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+    .side {
+      display: grid;
+      gap: 18px;
+    }
+    .card { padding: 24px; }
+    .step {
+      display: flex;
+      gap: 14px;
+      padding: 16px;
+      background: #fafafa;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      margin-top: 12px;
+    }
+    .num {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #111;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    section {
+      margin-top: 70px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    ul {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0;
+      padding-left: 18px;
+    }
+    footer {
+      margin: 70px 0 20px;
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .hero, .grid-3, .grid-2, .stats { grid-template-columns: 1fr; }
+      h1 { font-size: 40px; }
+      nav { display: none; }
+      .panel { padding: 28px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>XPay</h1>
-  <p>Crypto payments for merchants.</p>
+  <div class="wrap">
+    <header>
+      <div>
+        <strong style="font-size:22px;">XPay</strong><br>
+        <span style="font-size:12px;color:#666;">Crypto payment infrastructure for modern merchants</span>
+      </div>
+      <nav>
+        <a href="#product">Product</a>
+        <a href="#compliance">Compliance</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/checkout.html">Checkout</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="panel">
+        <div class="badge">B2B software platform • Non-custodial orchestration layer</div>
+        <h1>Accept crypto payments with a cleaner merchant checkout and a compliant partner stack.</h1>
+        <p>
+          XPay provides checkout infrastructure, merchant APIs, transaction status orchestration,
+          and signed webhook delivery for businesses that want to add crypto payment capabilities
+          without building the full stack in-house.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Request access</a>
+          <a class="btn secondary" href="#product">Explore the product</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <strong>API-first</strong>
+            <p>Merchant integration designed for platforms and marketplaces.</p>
+          </div>
+          <div class="stat">
+            <strong>Partner-led</strong>
+            <p>Regulated services are performed by licensed providers.</p>
+          </div>
+          <div class="stat">
+            <strong>Operational</strong>
+            <p>Payment tracking, webhooks, and merchant-side visibility.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="side">
+        <div class="card">
+          <div style="font-size:14px;color:#666;">Merchant flow</div>
+
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <strong>Merchant creates a payment</strong>
+              <p>XPay generates a hosted payment session and returns a checkout flow.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <strong>Customer chooses crypto</strong>
+              <p>The checkout routes the buyer into the integrated partner flow.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <strong>Licensed partners process the transaction</strong>
+              <p>Verification, payment processing, conversion, and settlement are handled externally by licensed providers.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">4</div>
+            <div>
+              <strong>XPay reports status back</strong>
+              <p>Merchants receive updates through the dashboard and signed webhooks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <strong>Positioning</strong>
+          <p style="margin-top:10px;">
+            XPay operates as a software infrastructure provider for businesses.
+            XPay does not hold customer funds, does not operate a consumer exchange,
+            and does not perform regulated services directly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section id="product">
+      <h2>Product overview</h2>
+      <p>XPay is designed for businesses that need a more controlled merchant payment layer: checkout creation, payment state management, partner routing, webhook delivery, and reporting infrastructure.</p>
+      <div class="grid-3" style="margin-top:22px;">
+        <div class="card">
+          <strong>Hosted Checkout</strong>
+          <p style="margin-top:10px;">A clean merchant-facing checkout experience designed to guide users into partner-managed payment and conversion flows.</p>
+        </div>
+        <div class="card">
+          <strong>Merchant API</strong>
+          <p style="margin-top:10px;">Payment creation, transaction lookup, status monitoring, and operational events through a simple integration surface.</p>
+        </div>
+        <div class="card">
+          <strong>Webhooks & Reporting</strong>
+          <p style="margin-top:10px;">Signed notifications and transaction state visibility for internal ops teams and merchant back offices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="compliance">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Compliance statement</h2>
+          <p>
+            XPay is a business software provider. The platform is designed as a non-custodial orchestration layer and does not hold customer funds or customer crypto-assets.
+          </p>
+          <p style="margin-top:14px;">
+            Identity verification, KYC/AML controls, payment processing, fiat-to-crypto conversion, and settlement are performed by licensed third-party providers integrated into the merchant flow.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Use case clarity</h2>
+          <ul>
+            <li>XPay is built for merchants, platforms, and marketplaces.</li>
+            <li>XPay is not a retail exchange, broker, or custody wallet service.</li>
+            <li>XPay provides software infrastructure and merchant operational tooling.</li>
+            <li>Regulated services are delivered through licensed integration partners.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="grid-2">
+        <div class="card">
+          <h2>Contact</h2>
+          <p><strong>Business name:</strong> XPay</p>
+          <p><strong>Use case:</strong> Crypto payment infrastructure for merchants and marketplaces.</p>
+          <p><strong>General:</strong> contact@xpays.app</p>
+          <p><strong>Support:</strong> support@xpays.app</p>
+          <p><strong>Legal:</strong> legal@xpays.app</p>
+        </div>
+        <div class="card">
+          <h2>Reviewer note</h2>
+          <p>
+            This website is intended to clearly describe XPay’s role as a software-only provider.
+            The platform does not hold customer funds or provide regulated services directly.
+            Licensed third-party providers handle verification, payment processing, conversion, and settlement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © XPay — Crypto payment infrastructure for merchants
+    </footer>
+  </div>
 </body>
 </html>
